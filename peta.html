@@ -1,0 +1,70 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Leaflet Web Map</title> 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+    <script src="https://unpkg.com/heatmap.js/build/heatmap.min.js"></script>
+    <script src="https://unpkg.com/leaflet-heatmap/leaflet-heatmap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.12/leaflet-routing-machine.min.js"></script>
+    <style> 
+        #map { 
+            width: 100%; 
+            height: 650px; 
+        } 
+    </style>  
+</head> 
+<body>
+    <h2 style="text-align: center; font-weight: bold;">
+        Peta Lokasi Fakultas Teknik
+    </h2>
+    <p style="text-align: center;">
+        Fransiska Natalia Pramesti (22/493315/TK/54034)
+    <div id="map"></div>  
+    <script>
+        var map = L.map('map', { 
+            center: [-7.765264918199205, 110.37232263787043], 
+            zoom: 16 
+        });  
+        
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { 
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var cfg = {
+            radius: 0.005,
+            maxOpacity: 0.8,
+            scaleRadius: true,
+            useLocalExtrema: true,
+            latField: 'lat',
+            lngField: 'lng',
+            valueField: 'count'
+        };
+
+        routeControl.on('routesfound', function(e) {
+            var route = e.routes[0];
+            var routeLine = L.polyline(route.coordinates, {color: 'blue', weight: 4}).addTo(map);
+            map.removeControl(routeControl);
+
+            var animatedMarker = L.marker(route.coordinates[0], {icon: carIcon}).addTo(map);
+            
+            var index = 0;
+            function animateMarker() {
+                if (index < route.coordinates.length) {
+                    animatedMarker.setLatLng(route.coordinates[index]);
+                    index++;
+                    setTimeout(animateMarker, 100);
+                }
+            }
+            animateMarker();
+        });
+    </script>
+    <script>
+        L.marker([-7.763882334984855, 110.37260430136139]).bindPopup('<b>Departemen Teknik Geodesi</b><br><img src="https://geodesi.ugm.ac.id/wp-content/uploads/sites/8/2024/02/4.png" width="200px">').addTo(map); 
+        L.marker([-7.764452203820844, 110.37218043423262]).bindPopup('<b>Departemen Teknik Arsitektur dan Perencanaan</b><br><img src="https://mpwk.ugm.ac.id/wp-content/uploads/sites/427/2017/01/a0817edc4e9684f1ea06d9e657966236.jpg" width="200px">').addTo(map);  
+        L.marker([-7.764331382275804, 110.37297704774954]).bindPopup('<b>Departemen Teknik Sipil</b><br><img src="https://tsipil.ugm.ac.id/wp-content/uploads/sites/4/2023/02/wsd_feb2023_1.jpg" width="200px">').addTo(map);
+        L.marker([-7.765745963678408, 110.37180406293369]).bindPopup('<b>Departemen Teknik Elektro dan Teknologi Informasi</b><br><img src="https://lustrum.dteti.ugm.ac.id/wp-content/uploads/sites/288/2018/06/gedungteti.jpg" width="200px">').addTo(map);
+        L.marker([-7.766182781453766, 110.37096805941191]).bindPopup('<b>Departemen Teknik Mesin dan Teknik Industri</b><br><img src="https://dtmi.ft.ugm.ac.id/wp-content/uploads/sites/11/2024/03/DSC5221-scaled-e1710992818319.jpg" width="200px">').addTo(map); 
+    </script>
+</body>
+</html>

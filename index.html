@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/styles1.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Fransiska Natalia Pramesti</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/siska.png" alt="..." /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about"><i class="fas fa-user-circle me-2"></i>UTS</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#task"><i class="fas fa-users me-2"></i>Esai</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#map"><i class="fas fa-briefcase me-2"></i>Peta</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education"><i class="fas fa-graduation-cap me-2"></i>Validasi</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container-fluid p-0">
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        <i class="fas fa-user-circle section-icon"></i>
+                        Ujian Tengah Semester
+                        <span class="text-primary"> Praktikum SIG WEB </span>
+                    </h1>
+                    <div class="subheading mb-5">
+                         Fransiska Natalia Pramesti · Teknik Geodesi UGM 2022
+                    </div>
+                    <p class="lead mb-5">Halaman web ini berisi pekerjaan hasil Ujian Tengah Semester Praktikum SIGWEB Teknik Geodesi FT UGM Tahun 2025 tanggal 10 April 2025. Informasi lebih lanjut mengenai Teknik Geodesi dapat diakses melalui :</p> 
+                    <br>
+                    <p><a href="https://geodesi.ugm.ac.id"> Alamat resmi Website Teknik Geodesi</a></p>
+                    <br>
+                    <p>Ujian Tengah Semester Praktikum SIG Web ini dikerjakan oleh : </p>
+                    <table border="1">
+                        <tr>
+                            <th>Nama Depan</th>
+                            <th>NIM</th>
+                        </tr>
+                        <tr>
+                            <td>Fransiska Natalia Pramesti</td>
+                            <td>22/493315/TK/54034</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Task-->
+            <section class="resume-section" id="organization">
+                <div class="resume-section-content">
+                    <h2 style="color:green;">Pembuatan Esai Kegiatan Praktikum</h2>
+                    <p><em><strong>Minggu 1 dan 2</strong></em></p>
+                    <p>Pada Minggu ini praktikum mempelajarai terkait dasar-dasar dari komponen HTML, JavaScript, dan CSS. HTML merupakan bahasa markup standar untuk pembuatan web. CSS berkaitan dengan desain tampilan web. 
+                        Dalam HTML terdapat komponen elemen dan tag</p>
+
+                    <p><em><strong>Minggu 3</strong></em></p>
+                    <p>Pada minggu ini dilakukan percobaan pembuatan halaman web sederhana yang dapat dilakukan dengan laman W3School. Pada minggu dibuat juga membuat CV sederhana dengan bantuan template dari WIX Studio</p>
+
+                    <p><em><strong>Minggu 4</strong></em></p>
+                    <p>Pada minggu ini dilakukan percobaan pembuatan halaman web sederhana yang berisi fungsi untuk melakukan hitungan statistisk, meliputi validasi password, validasi umur, perhitungan bilangan prima, perhitungan bilangan fibonacci.</p>
+                    
+                    <p><em><strong>Minggu 5</strong></em></p>
+                    <p>Pada minggu ini dilakukan percobaan pembuatan halaman web pada github dan juga melakukan pembuatan CV dengan Bootstrap. Pada minggu ini juga dilakukan pembuatan landing Page.</p>
+                    
+                    <p><em><strong>Minggu 6</strong></em></p>
+                    <p>Pada minggu ini dilakukan pembauatan peta online dengan Leaflet JS. Melakukan pembuatan peta rute dari Tugu Yogyakarta ke Alun-Alun Kidul dengan dilengkapi Heatmap.</p>
+                    
+                    <p><em><strong>Minggu 7</strong></em></p>
+                    <p>Pada minggu ini dilakukan pembuatan peta online dengan Leaflet Js dan GEOJson. Melakukan pembuatan peta administrasi daerah Kabupaten Gunungkidul.</p>
+                    <hr>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Experience-->
+            <section class="resume-section" id="experience">
+                <div class="resume-section-content">
+                    <h2 style="color:blue;">Pembuatan Peta Lokasi 5 Fakultas di UGM</h2>
+                    <a href="peta.html" class="icon">
+                        <i class="fas fa-clipboard-list"></i>
+                        <span>HASIL PETA</span>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Education-->
+            <section class="resume-section" id="education">
+                <div class="resume-section-content">
+                    <h2 style="color : red">Validasi Pekerjaan Selesai</h2>
+                    <script>
+                        function validatePassword() {
+                            var password = document.getElementById("password").value;
+                            if (password !== "Selesai") {
+                                var popUp = window.open("", "Error", "width=100,height=100");
+                                popUp.document.write("<p style='font-size:16px; text-align:center;'><em>Error</em></p>");
+                                return false;
+                            }
+                            return true;
+                        }
+                    </script>
+                    <p>Masukkan password pekerjaan :</p>
+                    <form onsubmit="return validatePassword()">
+                        Password: <input type="password" id="password" required><br><br>
+                        <input type="submit" value="Klik">
+                    </form>
+                </div>
+            </section>
+            <hr class="m-0" />
+            
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- Interactive features JS -->
+        <script>
+            // Scroll to top functionality
+            const scrollBtn = document.getElementById('scrollTop');
+            
+            window.onscroll = function() {
+                if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                    scrollBtn.classList.add('visible');
+                } else {
+                    scrollBtn.classList.remove('visible');
+                }
+            };
+            
+            scrollBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Section hover effects
+            document.querySelectorAll('.resume-section-content h2').forEach(heading => {
+                heading.addEventListener('click', function() {
+                    const sectionIcon = this.querySelector('.section-icon');
+                    sectionIcon.style.transform = 'rotate(360deg)';
+                    setTimeout(() => {
+                        sectionIcon.style.transform = 'scale(1)';
+                    }, 600);
+                });
+            });
+            
+            // Add tooltip functionality for skill icons
+            document.querySelectorAll('.list-inline-item').forEach(item => {
+                const icon = item.querySelector('i');
+                if (icon && icon.getAttribute('title')) {
+                    item.setAttribute('data-bs-toggle', 'tooltip');
+                    item.setAttribute('data-bs-placement', 'top');
+                    item.setAttribute('title', icon.getAttribute('title'));
+                }
+            });
+            
+            // Initialize tooltips
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+        </script>
+    </body>
+</html>
